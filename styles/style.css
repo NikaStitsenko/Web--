@@ -1,0 +1,462 @@
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('fonts/CenturyGothic.ttf');
+  font-family: 'PaladinRus';
+  src: url('fonts/paladinrus.ttf');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Century Gothic', Century Gothic;
+}
+
+:root {
+    --dark-bg: #1a1a1a;
+    --text-light: #ececec;
+    --accent: #930002;
+    --bordo: #65001A;
+    --gold: #9B858C;
+    --border: #333;
+    --card: #2a2a2a;
+}
+
+body {
+    color: var(--text-light);
+    background: var(--dark-bg);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: center;
+}
+
+/* Хедер*/
+header {
+    padding: 24px 0;
+    border-bottom: 2px solid var(--gold);
+    background: var(--dark-bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+
+
+.logo {
+    font-family: 'PaladinRus';
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--text-light);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    margin-left: auto; 
+    margin-right: 162px; 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-family: 'Century Gothic';
+    font-size: 24px;
+    transition: color 0.3s;
+    
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-links a:active {
+    color: var(--bordo);
+}
+
+.user-actions {
+    display: flex;
+    gap: 40px;
+    padding-top: 5px;
+    stroke: var(--text-light);
+    fill: none;
+    stroke-width: 2px;
+}
+
+.user-actions a {
+    color: var(--text-light);
+    font-size: 32px;
+    transition: color 0.3s;
+}
+
+.user-actions a:hover {
+    stroke: var(--gold);
+}
+
+.user-actions a:active {
+    stroke: var(--bordo);
+}
+
+
+
+
+
+/* Секция "О нас" */
+.about-section {
+    display: flex;
+    padding: 100px 0;
+    gap: 135px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    position: relative;
+    
+}
+
+.about-image {
+    flex: 1;
+    position: relative;
+}
+
+.about-image img {
+    width: 670px;
+    height: 428px;
+    object-fit: cover;
+    border: 2px solid var(--gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.about-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border); 
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.about-header h1 {
+    margin-bottom: 0; 
+    border-bottom: none; 
+    padding-bottom: 0;
+}
+
+
+
+h1 {
+    font-size: 36px;
+    font-family: 'Century Gothic';
+    font-weight: lighter;
+    color: var(--text-light);
+    padding-bottom: 10px;
+}
+
+
+.about-text p {
+    margin-bottom: 20px;
+    line-height: 1.4;
+    font-family: 'Roboto';
+    font-size: 20px;
+    color: var(--text-light);
+}
+
+.more-link {
+    position: static;
+    top: auto;
+    right: 0px;
+    text-decoration-line: underline;
+    color: var(--text-light);
+    font-family: 'Roboto';
+    font-size: 20px;
+    padding-top: 12px;
+    transition: all 0.3s;
+}
+
+.more-link:hover {
+    color: var(--gold);
+}
+
+.more-link:active {
+    color: var(--bordo);
+}
+
+/* Заголовки секций */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-family: 'Century Gothic';
+    font-weight: lighter;
+    color: var(--text-light);
+}
+
+.view-all {
+    text-decoration-line: underline;
+    color: var(--text-light);
+    font-family: 'Roboto', serif;
+    font-size: 20px;
+    padding-top: 12px;
+    transition: all 0.3s;
+}
+
+.view-all:hover {
+    color: var(--gold);
+}
+
+.view-all:active {
+    color: var(--bordo);
+}
+
+/* Сетка товаров */ /*крутить shift+колесико*/
+.product-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    
+    scroll-behavior: smooth;
+    margin-bottom: 100px;
+    scrollbar-width: none;
+}
+
+.product-grid a {
+    text-decoration: none;
+}
+
+.product-card {
+    flex: 0 0 auto;
+    width: 325px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 20px;
+    margin-top: 5px;
+    color: var(--text-light);
+    transition: all 0.3s ease;
+}
+
+
+.product-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(139, 0, 0, 0.2);
+}
+
+.product-card:active {
+    border-color: var(--bordo);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(139, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    height: 285px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.product-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Roboto';
+    color: var(--text-light);
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: lighter;
+    color: var(--text-light);
+}
+
+.wishlist-icon {
+    position: absolute;
+    font-size: 24px;
+    top: 32px;
+    right: 32px;
+    color: var(--text-light);
+    background: rgba(0,0,0,0.5);
+    border-radius: 25%;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.wishlist-icon:hover {
+    color: var(--accent);
+}
+
+.wishlist-icon:active {
+    color: var(--accent);
+    font-size: 20px;
+}
+
+/* Сетка мероприятий */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+.event-card {
+    display: flex;
+    gap: 20px;
+    background: var(--card);
+    padding: 20px;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.event-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(139, 0, 0, 0.2);
+}
+
+.event-card:active {
+    border-color: var(--bordo);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(139, 0, 0, 0.2);
+}
+
+.event-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 1px solid var(--border);
+}
+
+.event-details h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: var(--text-light);
+}
+
+.event-date {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #999;
+    font-style: italic;
+}
+
+.event-description {
+    font-family: 'Roboto';
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* Футер */
+footer {
+    background-color: var(--dark-bg);
+    padding: 100px 0 100px;
+    margin-top: 100px;
+    border-top: 2px solid var(--gold);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-logo {
+    font-family: 'PaladinRus';
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Century Gothic', bold;
+    color: var(--text-light);
+    padding-top: 14px;
+}
+
+.footer-column a, .footer-column p {
+    display: block;
+    text-decoration: none;
+    color: var(--text-light);
+    margin-bottom: 12px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: var(--gold);
+}
+
+.footer-column a:active {
+    color: var(--bordo);
+}
+
+.copyright {
+    margin-top: 45px;
+    font-size: 20px;
+    color: #666;
+    text-align: left;
+    width: 100%;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+    }
+    
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .event-card {
+        flex-direction: column;
+    }
+    
+    .event-image {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+}

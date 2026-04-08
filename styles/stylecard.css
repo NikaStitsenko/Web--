@@ -1,0 +1,504 @@
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('fonts/CenturyGothic.ttf');
+  font-family: 'PaladinRus';
+  src: url('fonts/paladinrus.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Century Gothic', Century Gothic;
+}
+
+:root {
+    --dark-bg: #1a1a1a;
+    --text-light: #ececec;
+    --accent: #930002;
+    --bordo: #65001A;
+    --gold: #9B858C;
+    --border: #333;
+    --card: #2a2a2a;
+}
+
+body {
+    color: var(--text-light);
+    background: var(--dark-bg);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+        /* Хедер */
+header {
+    padding: 24px 0;
+    border-bottom: 2px solid var(--gold);
+    background: var(--dark-bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.logo {
+    font-family: 'PaladinRus';
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--text-light);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    margin-left: auto; 
+    margin-right: 162px; 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-family: 'Century Gothic';
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-links a:active {
+    color: var(--bordo);
+}
+
+.user-actions {
+    display: flex;
+    gap: 40px;
+    padding-top: 5px;
+    stroke: var(--text-light);
+    fill: none;
+    stroke-width: 2px;
+}
+
+.user-actions a {
+    color: var(--text-light);
+    font-size: 32px;
+    transition: color 0.3s;
+}
+
+.user-actions a:hover {
+    stroke: var(--gold);
+}
+
+.user-actions a:active {
+    stroke: var(--bordo);
+}
+
+
+
+/* Основной контент - Grid layout */
+.product-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 135px;
+    padding: 100px 0;
+    align-items: start;
+}
+
+/* Изображения товара */
+.product-images {
+    display: grid;
+    gap: 20px;
+}
+
+.main-image {
+    width: 670px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.thumb {
+    width: 100%;
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.thumb:hover {
+    border-color: var(--gold);
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Информация о товаре */
+.product-info {
+    display: grid;
+    gap: 0px;
+    align-content: start;
+}
+
+.product-header {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 20px;
+    align-items: start;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+}
+
+.product-title-section {
+    display: grid;
+    gap: 5px;
+}
+
+.product-info h1 {
+    font-size: 36px;
+    font-family: 'Century Gothic';
+    font-weight: lighter;
+    color: var(--text-light);
+   
+}
+
+.price {
+    font-size: 24px;
+    font-weight: lighter;
+    color: var(--text-light);
+}
+
+.add-to-cart {
+    background: transparent;
+    color: var(--text-light);
+    border: 1px solid var(--card);
+    border-radius:12px;
+    background: var(--card);
+    padding: 12px 24px;
+    font-size: 20px;
+    font-family: 'Roboto';
+    cursor: pointer;
+    transition: all 0.3s;
+    
+    height: fit-content;
+    margin-top: 10px;
+}
+
+.add-to-cart:hover {
+    color: var(--gold);
+  
+}
+
+.add-to-cart:active {
+    color: var(--bordo);
+   
+}
+
+.fav-icon {
+    color: var(--text-light);
+    font-size: 28px;
+    cursor: pointer;
+    transition: color 0.3s;
+    background: var(--card);
+    border-radius: 25%;
+    padding: 12px;
+    margin-top: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.fav-icon:hover {
+    color: var(--accent);
+}
+
+.fav-icon:active {
+    color: var(--bordo);
+   
+}
+
+.desc-title, .features-title {
+    font-size: 24px;
+    font-family: 'Century Gothic';
+    font-weight: lighter;
+    color: var(--text-light);
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+}
+
+.desc, .features {
+    font-family: 'Roboto';
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.desc p, .features p {
+    font-family: 'Roboto';
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+        /* Сетка товаров */ 
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-family: 'Century Gothic';
+    font-weight: lighter;
+    color: var(--text-light);
+}
+
+.view-all {
+    text-decoration-line: underline;
+    color: var(--text-light);
+    font-family: 'Roboto', serif;
+    font-size: 20px;
+    padding-top: 12px;
+    transition: all 0.3s;
+}
+
+.view-all:hover {
+    color: var(--gold);
+}
+
+.view-all:active {
+    color: var(--bordo);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    
+}
+
+.product-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 20px;
+    margin-top: 5px;
+    color: var(--text-light);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.product-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(139, 0, 0, 0.2);
+}
+
+.product-card:active {
+    border-color: var(--bordo);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(139, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    height: 285px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.product-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Roboto';
+    color: var(--text-light);
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: lighter;
+    color: var(--text-light);
+}
+
+.wishlist-icon {
+    position: absolute;
+    font-size: 24px;
+    top: 32px;
+    right: 32px;
+    color: var(--text-light);
+    background: rgba(0,0,0,0.5);
+    border-radius: 25%;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.wishlist-icon:hover {
+    color: var(--accent);
+}
+
+.wishlist-icon:active {
+    color: var(--accent);
+    font-size: 20px;
+}
+
+    /* Футер одинаковый на всех страницах*/
+footer {
+    background-color: var(--dark-bg);
+    padding: 100px 0 100px;
+    margin-top: 100px;
+    border-top: 2px solid var(--gold);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-logo {
+    font-family: 'PaladinRus';
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Century Gothic', bold;
+    color: var(--text-light);
+    padding-top: 14px;
+}
+
+.footer-column a, .footer-column p {
+    display: block;
+    text-decoration: none;
+    color: var(--text-light);
+    margin-bottom: 12px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: var(--gold);
+}
+
+.footer-column a:active {
+    color: var(--bordo);
+}
+
+.copyright {
+    margin-top: 45px;
+    font-size: 20px;
+    color: #666;
+    text-align: left;
+    width: 100%;
+}
+
+        /* Адаптивность */
+@media (max-width: 1024px) {
+    .product-page {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+            
+    .product-images {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+            
+    .nav-links {
+        margin: 0;
+        gap: 15px;
+    }
+            
+    .product-header {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+            
+    .add-to-cart {
+        width: 100%;
+    }
+            
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+            
+    .footer-content {
+        flex-direction: column;
+    }
+            
+    .thumbnails {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .thumbnails {
+        grid-template-columns: 1fr;
+    }
+            
+    .main-image {
+        height: 400px;
+    }
+            
+    .product-header {
+        grid-template-columns: 1fr;
+    }
+}

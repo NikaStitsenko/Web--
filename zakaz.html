@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Gothic Home - Оформление заказа</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <!-- Pristine Validator (лёгкая и надёжная) -->
+    <script src="https://cdn.jsdelivr.net/npm/pristinejs@0.1.9/dist/pristine.min.js"></script>
+    <link rel="icon" href="img/icon/fav.svg" type="image/x-icon">
+    
+    <link rel="stylesheet" href="styles/stylezakaz.css">
+    <link rel="stylesheet" href="fonts/CenturyGothic.ttf">
+    <link rel="stylesheet" href="fonts/paladinrus.ttf">
+</head>
+<body>
+
+    <!-- Хедер -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Gothic home</div>
+                <div class="nav-links">
+                    <a href="index.html">Главная</a>
+                    <a href="katalog.html">Каталог</a>
+                    <a href="#">Мероприятия</a>
+                </div>
+                <div class="user-actions">
+                    <a href="zakaz.html">
+                        <svg width="28px" height="28px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">  
+                            <rect width="18" height="12" x="3" y="7"/> 
+                            <rect width="8" height="4" x="8" y="3"/> 
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg width="28px" height="28px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                            <path stroke-linecap="round" d="M5.5,19.5 C7.83333333,18.5 9.33333333,17.6666667 10,17 C11,16 8,16 8,11 C8,7.66666667 9.33333333,6 12,6 C14.6666667,6 16,7.66666667 16,11 C16,16 13,16 14,17 C14.6666667,17.6666667 16.1666667,18.5 18.5,19.5"/> 
+                            <circle cx="12" cy="12" r="10"/> 
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1>Заполните форму для завершения оформления</h1>
+                <h2>Необходимо заполнить обязательные поля</h2>
+            </div>
+
+            <div class="form-card">
+                <form id="orderForm" method="post" action="#">
+                    <!-- Имя  -->
+                    <div class="form-group">
+                        <label class="form-label" for="firstname">
+                            Имя <span class="required">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="firstname" name="firstname" required>
+                        <div class="pristine-error"></div>
+                    </div>
+
+                    <!-- Фамилия -->
+                    <div class="form-group">
+                        <label class="form-label" for="lastname">
+                            Фамилия <span class="required">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="lastname" name="lastname" required>
+                        <div class="pristine-error"></div>
+                    </div>
+
+                    <!-- Номер телефона  -->
+                    <div class="form-group">
+                        <label class="form-label" for="phone">
+                            Номер телефона <span class="required">*</span>
+                        </label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                        <div class="pristine-error"></div>
+                    </div>
+
+                    <!-- Email  -->
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                        <div class="pristine-error"></div>
+                    </div>
+
+                    <!-- Адрес доставки  -->
+                    <div class="form-group">
+                        <label class="form-label" for="address">
+                            Адрес доставки <span class="required">*</span>
+                        </label>
+                        <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+                        <div class="pristine-error"></div>
+                    </div>
+
+                    <!-- Кнопка перейти к оплате -->
+                    <button type="submit" class="btn-pay">Завершить оформление</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+     <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">Gothic home</div>
+                    <p class="copyright">© 2025</p>
+                </div>
+                <div class="footer-column">
+                    <h3>О нас</h3>
+                    <a href="#">О компании</a>
+                    <a href="#">Мероприятия</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Покупателям</h3>
+                    <a href="#">FAQ</a>
+                    <a href="#">Доставка</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <p>+79998764422</p>
+                    <p>Сизая ул. 5, офис 21</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="dist/pristine.js"  ></script>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('orderForm');
+            
+           
+            const pristine = new Pristine(form, {
+                classTo: 'form-group',        // родительский элемент для ошибки
+                errorClass: 'pristine-error', // класс для сообщения об ошибке
+                successClass: 'success',      // класс для успешного поля
+                errorTextParent: 'form-group', // куда вставлять ошибку
+                errorTextTag: 'div',          // тег для ошибки
+                errorTextClass: 'pristine-error' // класс для текста ошибки
+            });
+            
+            // Кастомная проверка для телефона 
+            function validatePhone(value) {
+                const phoneDigits = value.replace(/\D/g, '');
+                return phoneDigits.length >= 10;
+            }
+            pristine.addValidator(document.getElementById('phone'), validatePhone, 'Введите корректный номер телефона (минимум 10 цифр)', 2, false);
+            
+            // Кастомная проверка для email 
+            function validateEmail(value) {
+                if (value === '') return true; // пустое поле пропускаем
+                const emailRegex = /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/;
+                return emailRegex.test(value);
+            }
+            pristine.addValidator(document.getElementById('email'), validateEmail, 'Введите корректный email', 2, false);
+            
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+               
+                const isValid = pristine.validate();
+                
+                if (isValid) {
+                    // Заглушка: просто выводим сообщение
+                    alert('✅ Наш менеджер свяжется для оформления! ');
+                    console.log('Форма валидна! Данные можно отправлять.');
+                    // form.submit(); // раскомментировать для реальной отправки
+                } else {
+                    alert('❌ Пожалуйста, заполните все обязательные поля корректно');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

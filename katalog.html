@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Gothic Home - Каталог</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="icon" href="img/icon/fav.svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles/stylekatalog.css">
+    <link rel="stylesheet" href="fonts/CenturyGothic.ttf">
+    <link rel="stylesheet" href="fonts/paladinrus.ttf">
+</head>
+<body>
+
+    <!-- Хедер -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Gothic home</div>
+                <div class="nav-links">
+                    <a href="index.html">Главная</a>
+                    <a href="katalog.html">Каталог</a>
+                    <a href="#">Мероприятия</a>
+                </div>
+                <div class="user-actions">
+                    <a href="zakaz.html">
+                        <svg width="28px" height="28px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">  
+                            <rect width="18" height="12" x="3" y="7"/> 
+                            <rect width="8" height="4" x="8" y="3"/> 
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg width="28px" height="28px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> 
+                            <path stroke-linecap="round" d="M5.5,19.5 C7.83333333,18.5 9.33333333,17.6666667 10,17 C11,16 8,16 8,11 C8,7.66666667 9.33333333,6 12,6 C14.6666667,6 16,7.66666667 16,11 C16,16 13,16 14,17 C14.6666667,17.6666667 16.1666667,18.5 18.5,19.5"/> 
+                            <circle cx="12" cy="12" r="10"/> 
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Bootstrap Tabs - ВЕРТИКАЛЬНЫЕ PILLS -->
+        <div class="row">
+            <!-- Левая колонка: 3 колонки для навигации -->
+            <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
+                <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-all-tab" data-bs-toggle="pill" href="#v-pills-all" role="tab" aria-controls="v-pills-all" aria-selected="true">Все</a>
+                    <a class="nav-link" id="v-pills-new-tab" data-bs-toggle="pill" href="#v-pills-new" role="tab" aria-selected="false">Новинки</a>
+                    <a class="nav-link" id="v-pills-mirrors-tab" data-bs-toggle="pill" href="#v-pills-mirrors" role="tab" aria-selected="false">Зеркала</a>
+                    <a class="nav-link" id="v-pills-holders-tab" data-bs-toggle="pill" href="#v-pills-holders" role="tab" aria-selected="false">Подсвечники</a>
+                    <a class="nav-link" id="v-pills-dishes-tab" data-bs-toggle="pill" href="#v-pills-dishes" role="tab" aria-selected="false">Посуда</a>
+                    <a class="nav-link" id="v-pills-bookmarks-tab" data-bs-toggle="pill" href="#v-pills-bookmarks" role="tab" aria-selected="false">Закладки</a>
+                    <a class="nav-link" id="v-pills-sets-tab" data-bs-toggle="pill" href="#v-pills-sets" role="tab" aria-selected="false">Наборы</a>
+                </div>
+            </div>
+
+            <!-- Правая колонка: 9 колонок для контента -->
+            <div class="col-lg-9 col-md-8 col-sm-12">
+                <div class="tab-content" id="v-pills-tabContent">
+                    
+                    <!-- Вкладка: Все товары -->
+                    <div class="tab-pane fade show active" id="v-pills-all" role="tabpanel" aria-labelledby="v-pills-all-tab">
+                        <div class="row">
+                            <a href="card.html" class="col-lg-4 col-md-6 col-sm-12">
+                                <div >
+                                    <div class="product-card">
+                                        <img alt="Салатник Череп" class="product-image" src="img/cup/c64.jpg"/>
+                                        <i class="far fa-heart wishlist-icon"></i>
+                                        <h3 class="product-title">Салатник Череп</h3>
+                                        <p class="product-price">3000 ₽</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Набор зеркал Триптих" class="product-image" src="img/mirror/m41.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Набор зеркал Триптих</h3>
+                                    <p class="product-price">4000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Зеркало Ковка напольное" class="product-image" src="img/mirror/m72.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Зеркало Ковка напольное</h3>
+                                    <p class="product-price">5000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Зеркало Ковка настенное" class="product-image" src="img/mirror/m77.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Зеркало Ковка настенное</h3>
+                                    <p class="product-price">4000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Зеркало в виде готического окна из дерева, интерьер" class="product-image" src="img/mirror/m13.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Зеркало Окно дерево</h3>
+                                    <p class="product-price">1500 ₽</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Подсвечник Волк" class="product-image" src="img/holder/h52.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Подсвечник Волк</h3>
+                                    <p class="product-price">2000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Подсвечник Ворон" class="product-image" src="img/holder/h81.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Подсвечник Ворон</h3>
+                                    <p class="product-price">2000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Подсвечник Кошка" class="product-image" src="img/holder/h61.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Подсвечник Кошка</h3>
+                                    <p class="product-price">2000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Подсвечник Мышь" class="product-image" src="img/holder/h71.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Подсвечник Мышь</h3>
+                                    <p class="product-price">2000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Подсвечник Череп золотой" class="product-image" src="img/holder/h12.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Подсвечник Череп золотой</h3>
+                                    <p class="product-price">2000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Набор подсвечников" class="product-image" src="img/holder/h53.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Набор подсвечников</h3>
+                                    <p class="product-price">6000 ₽</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Пара кубков Драконы" class="product-image" src="img/cup/c11.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Пара кубков Драконы</h3>
+                                    <p class="product-price">4000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Пара кубков Черепа" class="product-image" src="img/cup/c21.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Пара кубков Черепа</h3>
+                                    <p class="product-price">4000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Пара кубков Единороги" class="product-image" src="img/cup/c41.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Пара кубков Единороги</h3>
+                                    <p class="product-price">4000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Пара кубков Волки" class="product-image" src="img/cup/c31.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Пара кубков Волки</h3>
+                                    <p class="product-price">4000 ₽</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Набор закладок Мечи" class="product-image" src="img/tab/t35.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Набор закладок Мечи</h3>
+                                    <p class="product-price">2000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Набор закладок Ножи" class="product-image" src="img/tab/t51.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Набор закладок Ножи</h3>
+                                    <p class="product-price">1000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Закладка Таро" class="product-image" src="img/tab/t41.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Закладка Таро</h3>
+                                    <p class="product-price">300 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Закладка Сердце" class="product-image" src="img/tab/t62.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Закладка Сердце</h3>
+                                    <p class="product-price">600 ₽</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    <!-- Вкладка: Новинки -->
+                    <div class="tab-pane fade" id="v-pills-new" role="tabpanel">
+                        <div class="row">
+                            <a href="card.html" class="col-lg-4 col-md-6 col-sm-12">
+                                <div >
+                                    <div class="product-card">
+                                        <img alt="Салатник Череп" class="product-image" src="img/cup/c64.jpg"/>
+                                        <i class="far fa-heart wishlist-icon"></i>
+                                        <h3 class="product-title">Салатник Череп</h3>
+                                        <p class="product-price">3000 ₽</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Набор закладок Ножи" class="product-image" src="img/tab/t51.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Набор закладок Ножи</h3>
+                                    <p class="product-price">1000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Набор закладок Мечи" class="product-image" src="img/tab/t35.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Набор закладок Мечи</h3>
+                                    <p class="product-price">2000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Закладка Сердце" class="product-image" src="img/tab/t62.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Закладка Сердце</h3>
+                                    <p class="product-price">600 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Подсвечник Череп золотой" class="product-image" src="img/holder/h12.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Подсвечник Череп золотой</h3>
+                                    <p class="product-price">2000 ₽</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Вкладка: Зеркала -->
+                    <div class="tab-pane fade" id="v-pills-mirrors" role="tabpanel">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Набор зеркал Триптих" class="product-image" src="img/mirror/m41.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Набор зеркал Триптих</h3>
+                                    <p class="product-price">4000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Зеркало Ковка напольное" class="product-image" src="img/mirror/m72.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Зеркало Ковка напольное</h3>
+                                    <p class="product-price">5000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Зеркало Ковка настенное" class="product-image" src="img/mirror/m77.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Зеркало Ковка настенное</h3>
+                                    <p class="product-price">4000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Зеркало в виде готического окна из дерева, интерьер" class="product-image" src="img/mirror/m13.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Зеркало Окно дерево</h3>
+                                    <p class="product-price">1500 ₽</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Вкладка: Подсвечники -->
+                    <div class="tab-pane fade" id="v-pills-holders" role="tabpanel">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Подсвечник Волк" class="product-image" src="img/holder/h52.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Подсвечник Волк</h3>
+                                    <p class="product-price">2000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Подсвечник Ворон" class="product-image" src="img/holder/h81.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Подсвечник Ворон</h3>
+                                    <p class="product-price">2000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Подсвечник Кошка" class="product-image" src="img/holder/h61.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Подсвечник Кошка</h3>
+                                    <p class="product-price">2000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Подсвечник Мышь" class="product-image" src="img/holder/h71.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Подсвечник Мышь</h3>
+                                    <p class="product-price">2000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Подсвечник Череп золотой" class="product-image" src="img/holder/h12.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Подсвечник Череп золотой</h3>
+                                    <p class="product-price">2000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Набор подсвечников" class="product-image" src="img/holder/h53.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Набор подсвечников</h3>
+                                    <p class="product-price">6000 ₽</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Вкладка: Посуда -->
+                    <div class="tab-pane fade" id="v-pills-dishes" role="tabpanel">
+                        <div class="row">
+                            <a href="card.html" class="col-lg-4 col-md-6 col-sm-12">
+                                <div >
+                                    <div class="product-card">
+                                        <img alt="Салатник Череп" class="product-image" src="img/cup/c64.jpg"/>
+                                        <i class="far fa-heart wishlist-icon"></i>
+                                        <h3 class="product-title">Салатник Череп</h3>
+                                        <p class="product-price">3000 ₽</p>
+                                    </div>
+                                    </div>
+                            </a>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Пара кубков Драконы" class="product-image" src="img/cup/c11.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Пара кубков Драконы</h3>
+                                    <p class="product-price">4000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Пара кубков Черепа" class="product-image" src="img/cup/c21.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Пара кубков Черепа</h3>
+                                    <p class="product-price">4000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Пара кубков Единороги" class="product-image" src="img/cup/c41.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Пара кубков Единороги</h3>
+                                    <p class="product-price">4000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Пара кубков Волки" class="product-image" src="img/cup/c31.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Пара кубков Волки</h3>
+                                    <p class="product-price">4000 ₽</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Вкладка: Закладки -->
+                    <div class="tab-pane fade" id="v-pills-bookmarks" role="tabpanel">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Набор закладок Мечи" class="product-image" src="img/tab/t35.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Набор закладок Мечи</h3>
+                                    <p class="product-price">2000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Набор закладок Ножи" class="product-image" src="img/tab/t51.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Набор закладок Ножи</h3>
+                                    <p class="product-price">1000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Закладка Таро" class="product-image" src="img/tab/t41.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Закладка Таро</h3>
+                                    <p class="product-price">300 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Закладка Сердце" class="product-image" src="img/tab/t62.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Закладка Сердце</h3>
+                                    <p class="product-price">600 ₽</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Вкладка: Наборы -->
+                    <div class="tab-pane fade" id="v-pills-sets" role="tabpanel">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Набор зеркал Триптих" class="product-image" src="img/mirror/m41.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Набор зеркал Триптих</h3>
+                                    <p class="product-price">4000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Набор закладок Мечи" class="product-image" src="img/tab/t35.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Набор закладок Мечи</h3>
+                                    <p class="product-price">2000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Набор закладок Ножи" class="product-image" src="img/tab/t51.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Набор закладок Ножи</h3>
+                                    <p class="product-price">1000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="product-card">
+                                    <img alt="Набор подсвечников" class="product-image" src="img/holder/h53.jpg"/>
+                                    <i class="far fa-heart wishlist-icon"></i>
+                                    <h3 class="product-title">Набор подсвечников</h3>
+                                    <p class="product-price">6000 ₽</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">Gothic home</div>
+                    <p class="copyright">© 2025</p>
+                </div>
+                <div class="footer-column">
+                    <h3>О нас</h3>
+                    <a href="#">О компании</a>
+                    <a href="#">Мероприятия</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Покупателям</h3>
+                    <a href="#">FAQ</a>
+                    <a href="#">Доставка</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <p>+79998764422</p>
+                    <p>Сизая ул. 5, офис 21</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</body>
+</html>
